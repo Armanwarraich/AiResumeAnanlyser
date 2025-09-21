@@ -1,0 +1,28 @@
+{
+  "name": "resume-analyzer-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Resume Analysis App",
+  "main": "server.js",
+  "scripts": {
+    "build-client": "babel App.jsx --out-file public/app.js",
+    "start": "npm run build-client && node server.js",
+    "start-debug": "npm run build-client && set DEBUG=express:* && node server.js",
+    "dev": "npm run build-client && nodemon server.js",
+    "build": "npm run build-client"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "pdf-parse": "^1.1.1",
+    "cors": "^2.8.5",
+    "@google/generative-ai": "^0.2.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-react": "^7.22.0",
+    "@babel/preset-env": "^7.23.0"
+  }
+}
